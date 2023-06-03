@@ -6,15 +6,15 @@
 
     $total = sum(14,6);
 
-    echo $total;
+    echo $total . '</br>';
 
     function isEven(int $num){
         if($num % 2 == 0){
-            echo "Number Is Even";
+            echo "Number " . $num . " Is Even";
         }else{
-            echo "Number Is Odd";
+            echo "Number ". $num ." Is Odd";
         }
     }
 
-    isEven(13);
+    isEven(15);
 ?>
