@@ -22,7 +22,32 @@
 
         public function insertData($firstName, $lastName, $email, $phone){
             $sql = "INSERT into users(first_name, last_name, email, phone) VALUES(:firstName,:lastName,:email,:phone)";
-            
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute([
+                'firstName'=>$firstName,
+                'lastName'=>$lastName,
+                'email'=>$email,
+                'phone'=>$phone
+            ]);
+
+
+            return true;
+        }
+
+        public function readData(){
+            $sql = "SELECT * FROM users";
+
+            $stmt = $this->conn->prepare($sql);
+
+            $stmt->execute();
+
+            $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            foreach ($results as $row) {
+                $data[] = $row; 
+            }
+
+            return true;
         }
     }
 
