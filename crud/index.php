@@ -128,7 +128,7 @@
                 </div>
 
                 <!-- Modal body -->
-                <div class="modal-body">
+                <div class="modal-body px-4">
                     <form action="" method="post" id="form-data">
                         <div class="form-group">
                             <input type="text" class="form-control" name="fName" id="fName" placeholder="FIRST NAME"
@@ -143,6 +143,15 @@
                         <div class="form-group">
                             <input type="email" class="form-control" name="email" id="email" placeholder="EMAIL"
                                 required>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="tel" class="form-control" name="phone" id="phone" placeholder="PHONE"
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="submit" class="form-control btn btn-outline-primary btn-block" name="insert" id="insert" value="Add User">
                         </div>
 
                     </form>
@@ -180,7 +189,6 @@
                 backdrop: 'static'
             });
         });
-
 
     </script>
 </body>
