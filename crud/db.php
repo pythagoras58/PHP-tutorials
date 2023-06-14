@@ -35,6 +35,7 @@
         }
 
         public function readData(){
+            $data =  array();
             $sql = "SELECT * FROM users";
 
             $stmt = $this->conn->prepare($sql);
@@ -47,7 +48,14 @@
                 $data[] = $row; 
             }
 
-            return true;
+            return $data;
+        }
+
+
+        public function getUserById($id){
+            $sql = "SELECT * FROM users WHERE id=:id";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute(['id'=>$id]);
         }
     }
 
