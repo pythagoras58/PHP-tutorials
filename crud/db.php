@@ -56,6 +56,10 @@
             $sql = "SELECT * FROM users WHERE id=:id";
             $stmt = $this->conn->prepare($sql);
             $stmt->execute(['id'=>$id]);
+
+            $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            return $result;
         }
     }
 
