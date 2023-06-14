@@ -61,6 +61,41 @@
 
             return $result;
         }
+
+        public function updateUser($id, $firstName, $lastName, $email, $phone){
+            $sql = "UPDATE users SET first_name=:firstName, last_name=:lastName, email=:email, phone=:phone WHERE id=:id";
+
+            $stmt= $this->conn->prepare($sql);
+            $stmt->execute([
+                'firstName'=>$firstName,
+                'lastName'=>$lastName,
+                'email'=>$email,
+                'phone'=>$phone,
+                'id'=>$id
+            ]);
+
+            return true;
+        }
+
+
+        public function deleteUser($id){
+            $sql = "DELETE FROM users WHERE id=:id";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute(['id'=>$id]);
+
+            return true;
+            
+        }
+
+        public function totalRowCount(){
+            $sql = "SELECT * from users";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute();
+
+            $total = $stmt->rowCount();
+
+            return $total;
+        }
     }
 
 
