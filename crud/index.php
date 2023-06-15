@@ -75,41 +75,9 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="table-responsive" id="showUser">
-                    <table class="table table-striped table-sm table-bordered">
-                        <thead>
-                            <tr class="text-center">
-                                <th>ID</th>
-                                <th>FIRST NAME</th>
-                                <th>LAST NAME</th>
-                                <th>EMAIL</th>
-                                <th>PHONE</th>
-                                <th>ACTION</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <?php for ($i = 0; $i < 100; $i++): ?>
-                                <tr class="text-center text-secondary">
-                                    <td>
-                                        <?php echo $i; ?>
-                                    </td>
-                                    <td>PAPI</td>
-                                    <td>DANSO</td>
-                                    <td>solomonda@gmail.com</td>
-                                    <td>13212321123</td>
-                                    <td>
-                                        <a href="#" title="View Details" class="text-success"><i
-                                                class="fas fa-info-circle fa-lg"></i></a>&nbsp;&nbsp;
-                                        <a href="#" title="Edit Details" class="text-primary"><i
-                                                class="fas fa-edit fa-lg"></i></a>&nbsp;&nbsp;
-                                        <a href="#" title="Edit Details" class="text-danger"><i
-                                                class="fas fa-trash-alt fa-lg"></i></a>
-                                    </td>
-                                </tr>
-
-                            <?php endfor; ?>
-                        </tbody>
-                    </table>
+                   
+                        
+                        
                 </div>
             </div>
         </div>
@@ -161,9 +129,8 @@
     </div>
     <!---END MODAL-->
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.21/js/jquery.dataTables.min.js"
         integrity="sha512-BkpSL20WETFylMrcirBahHfSnY++H2O1W+UnEEO4yNIl+jI2+zowyoGJpbtk6bx97fBXf++WJHSSK2MV4ghPcg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -181,7 +148,26 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
-            $('table').DataTable();
+           
+
+            showUsers();
+
+            function showUsers() {
+                $.ajax({
+                    url:"action.php",
+                    type: "POST",
+                    data: {action:"view"},
+                    success: function(res){
+                        // console.log(res);
+                        $('#showUser').html(res);
+                        $('table').DataTable({
+                            order: [0,'desc']
+                        });
+                    }
+                });
+            }
+
+
         });
 
         $(document).on('click', '#newUser', function() {
