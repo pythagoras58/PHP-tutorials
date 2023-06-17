@@ -182,6 +182,8 @@
                                 type: 'success'
                             });
                             $('#newUserModal').modal('hide');
+                            $('#form-data')[0].reset();
+                            showUsers();
                         }
                     });
                 }
