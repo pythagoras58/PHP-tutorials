@@ -151,7 +151,6 @@
            
 
             showUsers();
-
             function showUsers() {
                 $.ajax({
                     url:"action.php",
@@ -167,6 +166,22 @@
                 });
             }
 
+            // data insertion.
+            $('#insert').click(function(e){
+                if($('#form-data')[0].checkValidity()){
+                    e.preventDefault();
+
+                    // insert with ajax call
+                    $.ajax({
+                        url: 'action.php',
+                        type: 'POST',
+                        data: $('#form-data').serialize()+'&action=insert',
+                        success: function(res){
+                            console.log(res);
+                        }
+                    });
+                }
+            });
 
         });
 

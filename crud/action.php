@@ -51,4 +51,14 @@ if (isset($_POST['action']) && $_POST['action'] == "view") {
         echo '<h3 class=""text-center text-secondary mt-5>: (No User Present)</h3>';
     }
 }
+
+
+    // insert user data into the database
+    if(isset($_POST['action']) && $_POST['action'] == "insert"){
+        // get the form data.
+        $fname = $_POST['fName'];
+        $lname = $_POST['lName'];
+        $email = $_POST['email'];
+        $phone = $_POST['phone'];
+    }
 ?>
