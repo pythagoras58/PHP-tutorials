@@ -177,7 +177,11 @@
                         type: 'POST',
                         data: $('#form-data').serialize()+'&action=insert',
                         success: function(res){
-                            console.log(res);
+                            Swal.fire({
+                                title: 'User Created Successfully',
+                                type: 'success'
+                            });
+                            $('#newUserModal').modal('hide');
                         }
                     });
                 }

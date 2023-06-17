@@ -60,5 +60,9 @@ if (isset($_POST['action']) && $_POST['action'] == "view") {
         $lname = $_POST['lName'];
         $email = $_POST['email'];
         $phone = $_POST['phone'];
+
+
+        $d->insertData($fname,$lname,$email,$phone);
+        
     }
 ?>
