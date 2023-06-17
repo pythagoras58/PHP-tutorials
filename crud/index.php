@@ -84,7 +84,7 @@
     </div>
 
 
-    <!-- The Modal -->
+    <!-- The Add New User Modal -->
     <div class="modal fade" id="newUserModal">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -120,6 +120,52 @@
 
                         <div class="form-group">
                             <input type="submit" class="form-control btn btn-outline-primary btn-block" name="insert" id="insert" value="Add User">
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---END MODAL-->
+
+
+     <!-- The Edit User Modal -->
+     <div class="modal fade" id="editUserModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title text text-primary" style="margin-left:37%">Edit User</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body px-4">
+                    <form action="" method="post" id="edit-form-data">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="fName" id="fName" 
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="lName" id="lName" 
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" class="form-control" name="email" id="email" 
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="tel" class="form-control" name="phone" id="phone" 
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="submit" class="form-control btn btn-outline-primary btn-block" name="edit" id="edit" value="Edit User">
                         </div>
 
                     </form>
