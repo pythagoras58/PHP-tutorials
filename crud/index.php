@@ -114,7 +114,7 @@
                         </div>
 
                         <div class="form-group">
-                            <input type="tel" class="form-control" name="phone"  placeholder="PHONE"
+                            <input type="tel" class="form-control" name="phone" id="phone" placeholder="PHONE"
                                 required>
                         </div>
 
@@ -144,28 +144,29 @@
                 <!-- Modal body -->
                 <div class="modal-body px-4">
                     <form action="" method="post" id="edit-form-data">
+                        <input type="hidden" name="id" id="id">
                         <div class="form-group">
-                            <input type="text" class="form-control"  id="fName" 
+                            <input type="text" class="form-control" name="fName" id="e_fName" 
                                 required>
                         </div>
 
                         <div class="form-group">
-                            <input type="text" class="form-control"  id="lName" 
+                            <input type="text" class="form-control" name="lName" id="e_lName" 
                                 required>
                         </div>
 
                         <div class="form-group">
-                            <input type="email" class="form-control"  id="email" 
+                            <input type="email" class="form-control" name="email" id="e_email" 
                                 required>
                         </div>
 
                         <div class="form-group">
-                            <input type="tel" class="form-control"   id="phone" 
+                            <input type="tel" class="form-control" name="phone" id="e_phone" 
                                 required>
                         </div>
 
                         <div class="form-group">
-                            <input type="submit" class="form-control btn btn-outline-warning btn-block" name="update" id="update" value="Edit User">
+                            <input type="submit" class="form-control btn btn-outline-primary btn-block" name="update" id="update" value="Edit User">
                         </div>
 
                     </form>
