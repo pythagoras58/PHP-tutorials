@@ -236,6 +236,12 @@
                 }
             });
 
+
+            // edit user
+            $('body').on('click', '.editBtn', function(e){
+                e.preventDefault();
+            });
+
         });
 
         $(document).on('click', '#newUser', function() {

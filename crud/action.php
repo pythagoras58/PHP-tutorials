@@ -34,13 +34,13 @@ if (isset($_POST['action']) && $_POST['action'] == "view") {
                     <td>' . $row['email'] . '</td>
                     <td>' . $row['phone'] . '</td>
                     <td>
-                                        <a href="#" title="View Details" class="text-success infoBtn"><i
+                                        <a href="#" title="View Details" class="text-success infoBtn" id="' . $row['id'] . '"><i
                                                 class="fas fa-info-circle fa-lg"></i></a>&nbsp;&nbsp;
 
-                                        <a href="#" title="Edit Details" class="text-primary editBtn"><i
+                                        <a href="#" title="Edit Details" class="text-primary editBtn" id="' . $row['id'] . '"><i
                                                 class="fas fa-edit fa-lg" data-toggle="modal" data-target="#editUserModal"></i></a>&nbsp;&nbsp;
 
-                                        <a href="#" title="Edit Details" class="text-danger deleteBtn"><i
+                                        <a href="#" title="Edit Details" class="text-danger deleteBtn" id="' . $row['id'] . '"><i
                                                 class="fas fa-trash-alt fa-lg"></i></a>
 
                                     </td></tr>';
