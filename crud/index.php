@@ -99,22 +99,22 @@
                 <div class="modal-body px-4">
                     <form action="" method="post" id="form-data">
                         <div class="form-group">
-                            <input type="text" class="form-control" name="fName" id="fName" placeholder="FIRST NAME"
+                            <input type="text" class="form-control" name="fName"  placeholder="FIRST NAME"
                                 required>
                         </div>
 
                         <div class="form-group">
-                            <input type="text" class="form-control" name="lName" id="lName" placeholder="LAST NAME"
+                            <input type="text" class="form-control" name="lName"  placeholder="LAST NAME"
                                 required>
                         </div>
 
                         <div class="form-group">
-                            <input type="email" class="form-control" name="email" id="email" placeholder="EMAIL"
+                            <input type="email" class="form-control" name="email"  placeholder="EMAIL"
                                 required>
                         </div>
 
                         <div class="form-group">
-                            <input type="tel" class="form-control" name="phone" id="phone" placeholder="PHONE"
+                            <input type="tel" class="form-control" name="phone"  placeholder="PHONE"
                                 required>
                         </div>
 
@@ -145,27 +145,27 @@
                 <div class="modal-body px-4">
                     <form action="" method="post" id="edit-form-data">
                         <div class="form-group">
-                            <input type="text" class="form-control" name="fName" id="fName" 
+                            <input type="text" class="form-control"  id="fName" 
                                 required>
                         </div>
 
                         <div class="form-group">
-                            <input type="text" class="form-control" name="lName" id="lName" 
+                            <input type="text" class="form-control"  id="lName" 
                                 required>
                         </div>
 
                         <div class="form-group">
-                            <input type="email" class="form-control" name="email" id="email" 
+                            <input type="email" class="form-control"  id="email" 
                                 required>
                         </div>
 
                         <div class="form-group">
-                            <input type="tel" class="form-control" name="phone" id="phone" 
+                            <input type="tel" class="form-control"   id="phone" 
                                 required>
                         </div>
 
                         <div class="form-group">
-                            <input type="submit" class="form-control btn btn-outline-primary btn-block" name="edit" id="edit" value="Edit User">
+                            <input type="submit" class="form-control btn btn-outline-warning btn-block" name="update" id="update" value="Edit User">
                         </div>
 
                     </form>
