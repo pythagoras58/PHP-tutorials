@@ -68,4 +68,13 @@ if (isset($_POST['action']) && $_POST['action'] == "view") {
         $d->insertData($fname,$lname,$email,$phone);
         
     }
+
+
+    // edit user
+    if(isset($_POST['edit_id'])){
+        $id = $_POST['edit_id'];
+
+        $row =$d->getUserById($id);
+        echo json_encode($row);
+    }
 ?>

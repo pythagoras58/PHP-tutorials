@@ -240,6 +240,16 @@
             // edit user
             $('body').on('click', '.editBtn', function(e){
                 e.preventDefault();
+                edit_id = $(this).attr('id');
+                
+                $.ajax({
+                    url: 'action.php',
+                    type: 'POST',
+                    data: {edit_id:edit_id},
+                    success:function(res){
+                        console.log(res);
+                    }
+                });
             });
 
         });
